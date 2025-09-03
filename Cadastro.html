@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/Cadastro.css">
+  <script src="Script/cadastro.js" defer></script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <nav class="container desktop-menu">
+      <ul class="menu_list">
+        <li><a href="index.html"><img src="Imagem/Teste12.svg" alt="Logo Principal" class="LogoPrincipal"></a> </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu Mobile inferior -->
+  <nav class="mobile-bottom-nav">
+    <a href="#inicio">🏠</a>
+  </nav>
+
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Cadastro de Cliente</h2>
+      <form id="cadastroForm">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit" class="cont-bt">Cadastrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

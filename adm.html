@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda do Administrador</title>
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/adm.css">
+  <script src="Script/agenda.js" defer></script>
+</head>
+
+<body class="agenda-page">
+  <header class="header">
+    <nav class="container desktop-menu">
+      <ul class="menu_list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="agenda.html">Agenda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Lançar Agendamento</h2>
+      <form id="agendaForm">
+        <label for="emailCliente">E-mail do Cliente</label>
+        <input type="email" id="emailCliente" placeholder="Digite o e-mail do cliente" required>
+
+        <label for="servico">Serviço</label>
+        <select id="servico" required>
+          <option value="">Selecione</option>
+          <option value="Previdenciário">Previdenciário</option>
+          <option value="Civil">Civil</option>
+          <option value="Trabalhista">Trabalhista</option>
+        </select>
+
+        <label for="data">Data</label>
+        <input type="date" id="data" required>
+
+        <label for="hora">Hora</label>
+        <input type="time" id="hora" required>
+
+        <button type="submit" class="cont-bt">Agendar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

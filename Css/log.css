@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "syne";
+
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Log {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #040c0e;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+    backdrop-filter: blur(120px);
+}
+
+.Log h1 {
+    font-size: 36px;
+    text-align: center;
+
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-size: 16px;
+    color: #040c0e;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+
+    color: #040c0e;
+
+}
+
+.lucide-lock-icon {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+.lucide-shield-user {
+    position: absolute;
+    right: 20px;
+    top: 25%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+
+.Relembre {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.Relembre label input {
+    accent-color: #040c0e;
+    margin-right: 5px;
+
+}
+
+.Relembre a {
+    text-decoration: none;
+    color: #040c0e;
+}
+
+
+.Relembre a:hover {
+    text-decoration: underline;
+
+}
+
+.login-botao {
+    width: 100%;
+    height: 50px;
+    background-color: #07208d;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 0 10px #131010;
+    margin-top: 10px;
+
+}
+
+.login-botao:hover {
+    background-color: transparent;
+    border: 2px #040c0e;
+    color: #040c0e;
+    transition: 0.5s;
+}
+
+.Registo-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+
+}
+
+.Registo-link a {
+    text-decoration: none;
+    color: #040c0e;
+    font-weight: 600;
+}
+
+.Registo-link a:hover {
+    text-decoration: underline;
+
+
+}
+

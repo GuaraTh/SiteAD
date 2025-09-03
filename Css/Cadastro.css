@@ -1,0 +1,70 @@
+/* ======== ESTILO GERAL DOS FORMULÁRIOS ======== */
+.form-section {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8f9ff, #e3e6f5);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #07208d;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+input, select {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #07208d;
+  box-shadow: 0 0 8px rgba(7,32,141,0.2);
+}
+
+/* Botões */
+button.cont-bt {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #07208d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button.cont-bt:hover {
+  background: #040c0e;
+}
+
+/* ======== CADASTRO ======== */
+.cadastro-page .form-section {
+  border-left: 8px solid #07208d;
+}
+
+.cadastro-page h2::before {
+  content: "📝 ";
+}
