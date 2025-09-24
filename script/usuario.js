@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const token = localStorage.getItem("token");
 
-  if (!token) {
-    alert("Você precisa estar logado!");
-    window.location.href = "login.html";
-    return;
-  }
+  // if (!token) {
+  //   alert("Você precisa estar logado!");
+  //   window.location.href = "login.html";
+  //   return;
+  // }
 
   //try {
     // 1. Buscar dados do perfil
@@ -74,4 +74,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
+
 
