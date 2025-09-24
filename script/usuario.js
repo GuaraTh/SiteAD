@@ -7,19 +7,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  try {
+  //try {
     // 1. Buscar dados do perfil
-    const resPerfil = await fetch("http://localhost:3006/api/profile", {
-      headers: { Authorization: `Bearer ${token}` }
+    //const resPerfil = await fetch("http://localhost:3006/api/profile", {
+      //headers: { Authorization: `Bearer ${token}` }
     });
 
-    const perfil = await resPerfil.json();
+    // const perfil = await resPerfil.json();
 
-    if (!resPerfil.ok) {
-      alert(perfil.error || "Erro ao carregar perfil");
-      window.location.href = "login.html";
-      return;
-    }
+    // if (!resPerfil.ok) {
+    //   alert(perfil.error || "Erro ao carregar perfil");
+    //   window.location.href = "login.html";
+    //   return;
+    // }
 
     // Preencher cabeçalho
     document.getElementById("user-name").textContent = perfil.nome;
@@ -74,3 +74,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 });
+
