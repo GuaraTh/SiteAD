@@ -1,0 +1,128 @@
+/* Reutilize o CSS do admin.html para manter o padrão visual */
+    :root {
+      --primary: #1a3a5f;
+      --secondary: #2c5c8f;
+      --accent: #d4af37;
+      --light: #f5f7fa;
+      --dark: #2d3748;
+      --success: #48bb78;
+      --danger: #e53e3e;
+      --warning: #ed8936;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1rem 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo i {
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+    .logo h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .user-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #c99b27;
+    }
+    .btn-logout {
+      background-color: var(--danger);
+      color: white;
+    }
+    .btn-logout:hover {
+      background-color: #c53030;
+    }
+    main.content {
+      margin-top: 20px;
+    }
+    .profile-section, .appointments-section {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    h2.section-title {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    .profile-info p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .appointments-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .appointments-table th, .appointments-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .appointments-table th {
+      background-color: #f8fafc;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .appointments-table tr:hover {
+      background-color: #f8fafc;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .status-confirmado {
+      background-color: #c6f6d5;
+      color: #2f855a;
+    }
+    .status-pendente {
+      background-color: #feebc8;
+      color: #c05621;
+    }
+    .status-cancelado {
+      background-color: #fed7d7;
+      color: #c53030;
+    }

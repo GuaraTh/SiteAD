@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Syne", sans-serif;
+}
+
+body {
+  background-color: #f2f4f8;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.Log {
+  width: 420px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Logolog {
+  width: 100px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  color: #07208d;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.input-box input::placeholder {
+  color: #666;
+}
+
+.lucide-lock-icon,
+.lucide-shield-user {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.Relembre {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.Relembre a {
+  color: #07208d;
+  text-decoration: none;
+}
+
+.login-botao {
+  width: 100%;
+  padding: 12px;
+  background-color: #07208d;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-botao:hover {
+  background-color: #05176b;
+}
+
+.Registro-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.Registro-link a {
+  color: #07208d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #333;
+}
+
+.social-icons img {
+  width: 24px;
+  margin: 0 10px;
+}

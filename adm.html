@@ -1,55 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agenda do Administrador</title>
-  <link rel="stylesheet" href="Css/style.css">
-  <link rel="stylesheet" href="Css/adm.css">
-  <script src="Script/agenda.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Escritório de Advogados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="css/adm.css">
+     <script src="script/adm.js" defer></script>
 </head>
-
-<body class="agenda-page">
-  <header class="header">
-    <nav class="container desktop-menu">
-      <ul class="menu_list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-        <li><a href="perfil.html">Perfil</a></li>
-        <li><a href="agenda.html">Agenda</a></li>
-      </ul>
-    </nav>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-balance-scale"></i>
+          <h1>Escritório Silva & Advogados</h1>
+        </div>
+        <div class="user-actions">
+          <div id="admin-profile" style="display:flex; align-items:center; gap:10px;">
+            <i class="fas fa-user-circle" style="font-size:1.5rem; color:#d4af37;"></i>
+            <div>
+              <div id="admin-name" style="font-weight:600;"></div>
+              <div id="admin-email" style="font-size:0.85rem; opacity:0.8;"></div>
+            </div>
+          </div>
+          <button class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="form-section">
-      <h2>Lançar Agendamento</h2>
-      <form id="agendaForm">
-        <label for="emailCliente">E-mail do Cliente</label>
-        <input type="email" id="emailCliente" placeholder="Digite o e-mail do cliente" required>
+  <div class="container">
+    <div class="main-content">
+      <aside class="sidebar">
+        <ul class="sidebar-menu">
+         
+          <li><a href="adm.html"><i class="fas fa-calendar-alt"></i> Agendamentos</a></li>
+      
+        </ul>
+      </aside>
 
-        <label for="servico">Serviço</label>
-        <select id="servico" required>
-          <option value="">Selecione</option>
-          <option value="Previdenciário">Previdenciário</option>
-          <option value="Civil">Civil</option>
-          <option value="Trabalhista">Trabalhista</option>
-        </select>
+      <main class="content">
+        <div class="dashboard">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="card-title">Agendamentos Hoje</div>
+            <div class="card-value" id="agendamentos-hoje">0</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="card-title">Total de Clientes</div>
+            <div class="card-value" id="total-clientes">0</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="card-title">Serviços Ativos</div>
+            <div class="card-value">3</div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="card-title">Taxa de Conversão</div>
+            <div class="card-value">78%</div>
+          </div>
+        </div>
 
-        <label for="data">Data</label>
-        <input type="date" id="data" required>
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">Buscar Cliente</h2>
+          </div>
+          <div class="search-form">
+            <input type="email" class="form-control" placeholder="Digite o email do cliente" id="input-email-cliente" />
+            <button class="btn btn-primary" id="btn-buscar-cliente">Buscar</button>
+          </div>
+        </div>
 
-        <label for="hora">Hora</label>
-        <input type="time" id="hora" required>
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">Agendar Consulta</h2>
+          </div>
+          <form class="appointment-form" id="form-agendamento">
+            <div class="form-group">
+              <label for="client-name">Nome do Cliente</label>
+              <input type="text" id="client-name" class="form-control" disabled />
+            </div>
+            <div class="form-group">
+              <label for="client-email">Email</label>
+              <input type="email" id="client-email" class="form-control" disabled />
+            </div>
+            <div class="form-group">
+              <label for="service">Serviço</label>
+              <select id="service" class="form-control" required>
+                <option value="">Selecione o serviço</option>
+                <option value="previdenciario">Previdenciário</option>
+                <option value="trabalhista">Trabalhista</option>
+                <option value="civil">Civil</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Data</label>
+              <input type="date" id="date" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Hora</label>
+              <input type="time" id="time" class="form-control" required />
+            </div>
+            <div class="form-group form-group-full">
+              <label for="notes">Observações</label>
+              <textarea id="notes" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group form-group-full">
+              <button type="submit" class="btn btn-primary">Agendar Consulta</button>
+            </div>
+          </form>
+        </div>
 
-        <button type="submit" class="cont-bt">Agendar</button>
-      </form>
-    </section>
-  </main>
+        <div class="content-section">
+          <div class="section-header">
+            <h2 class="section-title">Próximos Agendamentos</h2>
+          </div>
+          <table class="appointments-table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Serviço</th>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-agendamentos">
+              <!-- Agendamentos serão inseridos aqui -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
-  </footer>
+
 </body>
 </html>

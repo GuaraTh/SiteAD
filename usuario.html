@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil do Usuário - Escritório de Advogados</title>
+  <link rel="stylesheet" href="css/usuario.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script defer src="script/usuario.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <i class="fas fa-balance-scale"></i>
+          <h1>Escritório Silva & Advogados</h1>
+        </div>
+        <div class="user-actions">
+          <div id="user-profile" style="display:flex; align-items:center; gap:10px;">
+            <i class="fas fa-user-circle" style="font-size:1.5rem; color:#d4af37;"></i>
+            <div>
+              <div id="user-name" style="font-weight:600;"></div>
+              <div id="user-email" style="font-size:0.85rem; opacity:0.8;"></div>
+            </div>
+          </div>
+          <button class="btn btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="profile-section">
+      <h2 class="section-title">Meu Perfil</h2>
+      <div class="profile-info">
+        <p><strong>Nome:</strong> <span id="perfil-nome"></span></p>
+        <p><strong>Email:</strong> <span id="perfil-email"></span></p>
+        <p><strong>Telefone:</strong> <span id="perfil-telefone"></span></p>
+        <p><strong>Tipo de Usuário:</strong> <span id="perfil-tipo"></span></p>
+      </div>
+    </section>
+
+    <section class="appointments-section">
+      <h2 class="section-title">Meus Agendamentos</h2>
+      <table class="appointments-table">
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-agendamentos">
+          <!-- Agendamentos serão inseridos aqui -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>

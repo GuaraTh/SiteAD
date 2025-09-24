@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Inicial</title>
-  <link rel="stylesheet" href="Css/style.css">
-  <script src="Script/Script.js" defer></script>
+  <script src="script/script.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -46,7 +46,7 @@
         <li><a href="#sobre" class="hideMobile">Sobre</a></li>
         <li><a href="#servicos" class="hideMobile">Serviços</a></li>
         <li><a href="#contato" class="hideMobile">Contato</a></li>
-        <li><a href="#noticias" class="hideMobile">Notícias</a></li>
+        <li><a href="#noticias" class="hideMobile">Avaliação</a></li>
         <li><a href="login.html" class="hideMobile">Login</a></li>
       </ul>
     </nav>
@@ -54,11 +54,11 @@
 
   <!-- Menu Mobile inferior -->
   <nav class="mobile-bottom-nav">
-    <a href="#inicio">🏠</a>
-    <a href="#sobre">ℹ️</a>
-    <a href="#servicos">⚖️</a>
-    <a href="#contato">📞</a>
-    <a href="#noticias">📰</a>
+    <a href="#sobre"><img src="Imagem/circle-question-mark.svg"></a>
+    <a href="#servicos"><img src="Imagem/briefcase-business.svg"></a>
+    <a href="#contato"><img src="Imagem/phone.svg"></a>
+    <a href="#loc"><img src="Imagem/navigation.svg"></a>
+    <a href="login.html"><img src="Imagem/shield-user.svg"></a>
   </nav>
 
   <!-- Conteúdo principal -->
@@ -96,7 +96,7 @@
     </section>
 
     <!-- Serviços -->
-    <section id="servicos" class="Servico">
+    <section id="servicos" class="servico">
       <div class="Serv-con">
         <h2 class="sub-titulo">Meus <span>Serviços</span></h2>
         <div class="Servico_list">
@@ -129,7 +129,17 @@
 
     </section>
   </main>
-  <section class="contato">
+
+  <section id="loc" class="localizacao">
+    <h2>Nossa Localização</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1234567890123!2d-43.209123!3d-22.903456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e0a1234567%3A0xabcdef1234567890!2sRua%20Lamartine%20Delamare%2C%20447%20-%20Sala%2001!5e0!3m2!1spt-BR!2sbr!4v1696220000000!5m2!1spt-BR!2sbr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Escritório">
+      </iframe>
+    </div>
+  </section>
+  <section id="contato" class="contato">
     <h2>Entre em Contato</h2>
     <form class="form-contato">
       <label for="nome">Nome:</label>
@@ -144,24 +154,36 @@
       <button type="submit">Enviar</button>
     </form>
   </section>
+
+  <section id="noticias" class="avaliacoes">
+  <h2 class="sub-titulo">Avaliações de Clientes</h2>
+
+  <div id="avaliacoesGrid" class="avaliacoes-grid"></div>
+
+  <div id="navigationControls" class="navigation-controls"></div>
+
+  <div id="errorMessage" class="error-message" style="display: none;">
+    <p>Erro ao carregar avaliações. Mostrando dados de demonstração.</p>
+  </div>
+</section>
   <!-- Rodapé -->
-  <footer>
     <footer class="footer">
       <h3>Nos acompanhe nas redes sociais</h3>
       <div class="social-icons">
         <a href="https://www.instagram.com/pedro.hslimaadv?igsh=MW5xN3E5bnRwMjJxYw==" target="_blank"
           aria-label="Instagram">
-          <img src="Imagem/instagram.svg" alt="Instagram">
+          <img src="Imagem/insta.svg" alt="Instagram">
         </a>
         <a href="https://wa.me/message/VWEU6PXCMWLFM1" target="_blank" aria-label="WhatsApp">
           <img src="Imagem/whatsapp.svg" alt="WhatsApp">
         </a>
         <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" aria-label="LinkedIn">
-          <img src="Imagem/linkedin.svg" alt="LinkedIn">
+          <img src="Imagem/link.svg" alt="LinkedIn">
         </a>
       </div>
       <p>&copy; 2025 - Todos os direitos reservados.</p>
     </footer>
+    
 </body>
 
 </html>
